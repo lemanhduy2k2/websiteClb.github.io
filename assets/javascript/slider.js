@@ -1,0 +1,88 @@
+import {$,$$} from './main.js';
+
+const TIME_TRANSFORM = 4500;
+let sliderIndex = 0;
+let sliderInterval;
+let orderArr = [];
+
+const sliderWrapper = $(".slider-wrapper");
+const sliderView = $(".slider-view");
+const sliderAllView = $$('.slide-item');
+
+
+const sliderRect = sliderWrapper.getBoundingClientRect();
+console.log(sliderRect);
+const viewWidth = sliderRect.width;
+
+function incrementSlide() {
+  if(orderArr.length == 3) {
+    if(sliderIndex === 0) {
+      orderArr = [];
+    } else {
+      sliderIndex--;
+    }
+  }
+  else {
+    orderArr.push(sliderIndex);
+     sliderIndex++;
+  }
+  setSlideView(sliderIndex);
+  console.log(sliderIndex);
+}
+
+function decrementSlide() {
+  sliderIndex = sliderIndex === 0 ? sliderAllView.length - 1 : sliderIndex - 1;
+  setSlideView(sliderIndex);
+}
+
+function setSlideView(index) {
+  sliderIndex = index;
+  sliderView.style.transform = `translateX(${-index * viewWidth}px)`;
+}
+
+function SwipeToTransf (sliderAllView) {
+  let mouse_start;
+  let mouse_end;
+  sliderAllView.forEach((slide)=> {
+    slide.onmousedown = (e)=> {
+      mouse_start = e.clientX;
+      clearInterval(sliderInterval);
+    }
+    slide.onmouseup = (e)=> {
+      mouse_end = e.clientX;
+      if(mouse_end >= mouse_start){
+        decrementSlide();
+      } else {
+        incrementSlide();
+      }
+    }
+  })
+};
+
+function activeSlider() {
+  return setInterval(() => {
+    incrementSlide();
+  }, TIME_TRANSFORM);
+}
+
+function sliderWrapperEvents() {
+  // stop transform when hover to view
+  sliderWrapper.addEventListener("mouseover", () => {
+    clearInterval(sliderInterval);
+  });
+
+  sliderWrapper.addEventListener("mouseout", () => {
+    sliderInterval = activeSlider();
+  });
+}
+
+function main() {
+  SwipeToTransf(sliderAllView);
+
+  sliderWrapperEvents();
+
+  // Auto transform
+  sliderInterval = activeSlider();
+}
+
+main();
