@@ -12,26 +12,90 @@ const LoginBlogBtn = $('.register-login-blog');
 const NotificationIcon = $('.notification');
 const NotificationBox = $('.notification--box');
 
+// Start about Mobile Javascript
+const mobileMenuIcon = $('.mobile-content-menu');
+const mobileNavigation = $('.mobile-navigation');
+
 //Get circleBTN 
 
 const circleBtn = $('.circle--content');
+const navBar = $('.nav-bar');
 const headerNav = $('.navigation');
 const headerAllItems = $$('.navigation--items');
+let navBarHeight = navBar.clientHeight;
+
+
+// Start about transfrom member
+const TIMETRANSF = 3000;
+let indexMember = 0;
+let indexInterval;
 
 const allWebsite = {
 
     handleHeaderNav,
     handleHeaderNavItems,
     handleModule,
+    AutoTransformMember,
 
     start: function() {
         this.handleHeaderNav();
         this.handleHeaderNavItems(headerAllItems);
         this.handleModule(LoginBtn);
+        this.AutoTransformMember();
     },
 };
 
 allWebsite.start();
+
+function AutoTransformMember() {
+    let orderArr = [];
+    const allItems = $$('.outstanding-members--items');
+    const WrapperItem = $('.outstanding-members--list');
+    const ReactItem = allItems[0].getBoundingClientRect();
+    const widthItem = ReactItem.width;
+
+    let lengthItems = allItems.length / 2;
+
+    indexInterval = setInterval(incrementMember , TIMETRANSF);
+    MemberWrapperEvents();
+
+    function incrementMember() {
+        if(orderArr.length == 4) {
+          if(indexMember === 0) {
+            orderArr = [];
+          } else {
+            indexMember--;
+          }
+        }
+        else {
+          orderArr.push(indexMember);
+          indexMember++;
+        }
+        setSlideView(indexMember);
+      }
+
+      function setSlideView(index) {
+        indexMember = index;
+        WrapperItem.style.transform = `translateX(${-index * widthItem}px)`;
+      }
+
+      function MemberWrapperEvents() {
+        // stop transform when hover to view
+        WrapperItem.addEventListener("mouseover", () => {
+          clearInterval(indexInterval);
+        });
+      
+        WrapperItem.addEventListener("mouseout", () => {
+            indexInterval = activeMember();
+        });
+      }
+
+      function activeMember() {
+        return setInterval(() => {
+            incrementMember();
+        }, TIMETRANSF);
+      }
+}
 
 
 //Handle Circle Btn when user click In
@@ -41,6 +105,7 @@ function handleHeaderNav() {
        if(checkPress) {
         const visible = $('.navigation.hidden');
         if(visible) {
+            navBar.style.height = `${navBarHeight}px`;
             visible.classList.remove('hidden');
         }
 
@@ -51,7 +116,7 @@ function handleHeaderNav() {
         if(visible) {
             visible.classList.remove('visible');
         }
-
+        navBar.style.height = "auto";
         headerNav.classList.add('hidden');
         checkPress = !checkPress;
        }
@@ -70,6 +135,7 @@ function handleHeaderNavItems(allItems) {
         })
     })
 };
+
 
 function handleModule(LoginBtn) {
     LoginBtn.addEventListener('click' ,OpenModule);
@@ -118,4 +184,17 @@ function OpenModule() {
 function hiddenModule() {
     Module.classList.remove('open');
 }
+
+let checkMobileIcon = false;
+
+mobileMenuIcon.onclick = (e)=> {
+    if(checkMobileIcon) {
+        mobileNavigation.style.display = 'none';
+        checkMobileIcon = false;
+    } else {
+        mobileNavigation.style.display = 'block';
+        checkMobileIcon = true;
+    }
+}
+
 

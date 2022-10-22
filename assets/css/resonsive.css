@@ -1,0 +1,206 @@
+@media (min-width: 740px) and (max-width: 1024px) {
+    
+}
+
+@media (max-width: 739px) {
+.mar-0
+    {
+        margin: 0 8px !important;
+    }
+    .row {
+        margin-left: -4px;
+        margin-right: -4px;
+    }
+    .col {
+        padding: 0 4px;
+    }
+
+    .c-0 {
+        display: none;
+    }
+    .c-2 {
+        flex: 0 0 16.66667;
+        max-width: 16.6667;
+    }
+    .c-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .c-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .header-bar {
+        display: none;
+    }
+    .slider {
+        width: 100vw;
+        height: 300px;
+    }
+
+    .slider-wrapper {
+        width: 100vw;
+        height: 300px;
+    }
+
+    .slide-item {
+        width: 100vw;
+        height: auto;
+    }
+
+    .slider-own--content {
+        min-width: 120px;
+        height: 50px;
+    }
+
+    .slider-own-text {
+        max-width: auto;
+        line-height: 1.5rem;
+        font-size: 1.4rem;
+    }
+    .rotate-icon {
+        display: none;
+    }
+
+    .nav-bar {
+        display: none;
+    }
+
+    .mobile-content {
+        width: 100%;
+        height: auto;
+    }
+    .mobile-content {
+        display: block;
+    }
+
+    .mobile-header {
+        display: flex;
+        width: 100vw;
+        height: 55px;
+        justify-content: space-between;
+        position: relative;
+        overflow: hidden;
+        justify-content: space-between;
+    }
+
+    .logo--link
+    {
+        width: 85px;
+        height: 85px;
+        position: absolute;
+        left: 45%;
+        top: 0;
+        transform: translate(-50%, -20%);
+    }
+
+    .login-field {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-content {
+        padding: 0;
+    }
+
+    .mobile-content-menu {
+        width: 60px;
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .login-btn {
+        width: 110px;
+    }
+
+    .content-menu-items {
+        font-size: 2.4rem;
+        color:#245d7c;
+    }
+    .content-menu-items:active {
+        color: #000;
+    }
+
+    .mobile-navigation {
+        width: 100%;
+        height: 360px;
+    }
+    .navigation--items {
+        height: 65px;
+    }
+    .items--link {
+        flex-direction: row;
+    }
+    .items--name {
+        margin-left: 15px;
+    }
+    .mobile-navigation {
+        display: none;
+        height: auto;
+    }
+    .leaders--main {
+        height: auto;
+    }
+    .leaders--list {
+        justify-content: center;
+    }
+
+    .leaders--items {
+        border: none;
+    }
+    .outstanding-members--content {
+        padding: 0;
+    }
+    .outstanding-members {
+        padding: 0;
+    }
+    .outstanding-members--items {
+        padding: 10px;
+    }
+    #courses {
+        height: auto;
+    }
+
+    .courses--items {
+        margin-bottom: 15px;
+    }
+    .news--items-image {
+        height: 150px;
+    }
+    .news--items-heading {
+        font-size: 1.8rem;
+    }
+
+    .time--title,
+    .desc--title {
+        font-size: 1.6rem;
+    }
+
+    .time--duration,
+    .desc--info {
+        font-size: 1.4rem;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        overflow: hidden;
+    }
+    .footer--nav-bar {
+        display: none;
+    }
+    .footer--main {
+        height: auto;
+    }
+    .footer--main-items {
+        margin-bottom: 15px;
+    }
+    .footer--main-items:first-child .main-items-heading {
+        margin: 0;
+        text-align: center;
+    }
+    .main-items-contact {
+        width: 100%;
+    }
+}

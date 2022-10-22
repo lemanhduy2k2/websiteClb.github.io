@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/slider.css">
+    <link rel="stylesheet" href="./assets/css/resonsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Finlandica:ital,wght@0,700;1,700&family=Kanit:wght@500&family=Karma&family=Open+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Quicksand:wght@700&family=Raleway:wght@100;200;300;400&family=Roboto+Slab:wght@700&family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -113,6 +115,50 @@
 
         </header>
 
+        <div class="mobile-content">
+            <div class="mobile-header">
+                <div class="mobile-content-menu">
+                    <i class="content-menu-items fa-solid fa-bars"></i>
+                </div>
+                <a href="#" class="logo--link">
+                        <!-- <img src="./assets/images/mainLogo.jpg" alt="ITC - Clb Tin Hoc" class="logo--img"> -->
+                </a>
+    
+                <div class="login-field">
+                    <button class="login-btn">Đăng nhập</button>
+                </div>
+            </div>
+
+            <div class="mobile-navigation">
+                <ul class="navigation--list">
+                    <li data-name="Home" class="navigation--items active">
+                        <a href="#" class="items--link">
+                            <i class="items--icons fa-solid fa-house-chimney"></i>
+                            <span class="items--name">Home</span>
+                        </a>
+                    </li>
+                    <li data-name="Leaders" class="navigation--items">
+                        <a href="#leaders" class="items--link">
+                            <i class="items--icons fa-solid fa-people-group"></i>
+                            <span class="items--name">Leaders</span>
+                        </a>
+                    </li>
+                    <li data-name="Courses" class="navigation--items">
+                        <a href="#courses" class="items--link">
+                            <i class="items--icons fa-solid fa-lightbulb"></i>
+                            <span class="items--name">Course</span>
+                        </a>
+                    </li>
+                    <li data-name="News" class="navigation--items">
+                        <a href="#news" class="items--link">
+                            <i class="items--icons fa-solid fa-newspaper"></i>
+                            <span class="items--name">News</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
         <div class="main-content">
             <div id="home">
                 <div class="slider">
@@ -137,6 +183,17 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="slide-item">
+                                <img src="./assets/images/hoatdong.jpg" alt="" class="slide-item-img">
+                                <div class="slider-own--content">
+                                    <p class="slider-own-text">Hoạt Động tiêu biểu</p>
+                                    <div class="rotate-icon">
+                                        <i class="icon-rotate fa-sharp fa-solid fa-compass"></i>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="slide-item">
                                 <img src="./assets/images/tranhtruong.jpg" alt="" class="slide-item-img">
                                 <div class="slider-own--content slider-own-gray">
@@ -161,8 +218,675 @@
                     
                 </div>
             </div>
+
+            <div id="leaders">
+                <div class="leaders--main">
+                    <h2 class="leaders--main-heading">Ban chủ nhiệm</h2>
+                    <div class="leaders--content grid">
+                        <ul class="leaders--list row">
+                            <li class="leaders--items col l-4">
+                                <div class="leaders--img">
+                                    <img src="./assets/images/Leaders1 (1).jpg" alt="" class="leaders-img-file">
+                                </div>
+                                <div class="leaders--info">
+                                    <p class="leaders--position">
+                                        Chủ nhiệm CLB
+                                    </p>
+                                    <h3 class="leaders--name">Lê Thị Thu Hiền</h3>
+                                </div>
+                            </li>
+
+                            <li class="leaders--items col l-4">
+                                <div class="leaders--img">
+                                    <img src="./assets/images/Leaders2.png" alt="" class="leaders-img-file">
+                                </div>
+                                <div class="leaders--info">
+                                    <p class="leaders--position">
+                                        Phó chủ nhiệm CLB
+                                    </p>
+                                    <h3 class="leaders--name">Vũ Thành Đạt</h3>
+                                </div>
+                            </li>
+                            <li class="leaders--items col l-4">
+                                <div class="leaders--img">
+                                    <img src="./assets/images/Leaders3.png" alt="" class="leaders-img-file">
+                                </div>
+                                <div class="leaders--info">
+                                    <p class="leaders--position">
+                                        Phó chủ nhiệm CLB
+                                    </p>
+                                    <h3 class="leaders--name">Trần Thị Thúy Nga</h3>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 class="outstanding-members--heading">Thành viên ưu tú</h3>
+                <div class="outstanding-members">
+                    <div class="outstanding-members--content grid">
+                        <ul class="outstanding-members--list row">
+                            <li class="outstanding-members--items col l-3 c-12">
+                                <div class="members-items--content">
+                                    <div class="members-items--img">
+                                        <div class="img--circle">
+                                            <img src="./assets/images/thanhdat.jpg" alt="" class="members-items-file">
+                                        </div>
+                                    </div>
+
+                                    <div class="members-items--info">
+                                        <div class="field--all">
+                                            <span class="field--left">Họ và Tên:</span>
+                                            <span class="field--right">Vũ Thành Đạt</span>
+                                        </div>
+                                        <div class="field--all">
+                                            <span class="field--left">Lớp:</span>
+                                            <span class="field--right">ĐHTI13A3HN</span>
+                                        </div>
+                                        <div class="field--all">
+                                            <span class="field--left">Thành tích nổi bật:</span>
+                                            <span class="field--right">Đã có nhiều đóng góp hoạt động cho Khoa CNTT</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li class="outstanding-members--items col l-3 c-12">
+                                <div class="members-items--content">
+                                    <div class="members-items--img">
+                                        <div class="img--circle">
+                                            <img src="./assets/images/quanghoc.jpg" alt="" class="members-items-file">
+                                        </div>
+                                    </div>
+
+                                    <div class="members-items--info">
+                                        <div class="field--all">
+                                            <span class="field--left">Họ và Tên:</span>
+                                            <span class="field--right">Nguyễn Quang Học</span>
+                                        </div>
+                                        <div class="field--all">
+                                            <span class="field--left">Lớp:</span>
+                                            <span class="field--right">ĐHTI14A5HN</span>
+                                        </div>
+                                        <div class="field--all">
+                                            <span class="field--left">Thành tích nổi bật:</span>
+                                            <span class="field--right">Đã có nhiều đóng góp hoạt động cho Khoa CNTT</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li class="outstanding-members--items col l-3 c-12">
+                                <div class="members-items--content">
+                                    <div class="members-items--img">
+                                        <div class="img--circle">
+                                            <img src="./assets/images/loannguyen02.jpg" alt="" class="members-items-file">
+                                        </div>
+                                    </div>
+
+                                    <div class="members-items--info">
+                                        <div class="field--all">
+                                            <span class="field--left">Họ và Tên:</span>
+                                            <span class="field--right">Nguyễn Thị Loan</span>
+                                        </div>
+                                        <div class="field--all">
+                                            <span class="field--left">Lớp:</span>
+                                            <span class="field--right">ĐHTI14A10HN</span>
+                                        </div>
+                                        <div class="field--all">
+                                            <span class="field--left">Thành tích nổi bật:</span>
+                                            <span class="field--right">Đã có nhiều đóng góp hoạt động cho Khoa CNTT</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li class="outstanding-members--items col l-3 c-12">
+                                <div class="members-items--content">
+                                    <div class="members-items--img">
+                                        <div class="img--circle">
+                                            <img src="./assets/images/huumanh.jpg" alt="" class="members-items-file">
+                                        </div>
+                                    </div>
+
+                                    <div class="members-items--info">
+                                        <div class="field--all">
+                                            <span class="field--left">Họ và Tên:</span>
+                                            <span class="field--right">Nguyễn Hữu Mạnh</span>
+                                        </div>
+                                        <div class="field--all">
+                                            <span class="field--left">Lớp:</span>
+                                            <span class="field--right">ĐHTI14A4HN</span>
+                                        </div>
+                                        <div class="field--all">
+                                            <span class="field--left">Thành tích nổi bật:</span>
+                                            <span class="field--right">Đã có nhiều đóng góp hoạt động cho Khoa CNTT</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li class="outstanding-members--items col l-3 c-12">
+                                <div class="members-items--content">
+                                    <div class="members-items--img">
+                                        <div class="img--circle">
+                                            <img src="./assets/images/quanganh.jpg" alt="" class="members-items-file">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="members-items--info">
+                                        <div class="field--all">
+                                            <span class="field--left">Họ và Tên:</span>
+                                            <span class="field--right">Tống Bá Quang Anh</span>
+                                        </div>
+                                        <div class="field--all">
+                                            <span class="field--left">Lớp:</span>
+                                            <span class="field--right">ĐHTI13A2HN</span>
+                                        </div>
+                                        <div class="field--all">
+                                            <span class="field--left">Thành tích nổi bật:</span>
+                                            <span class="field--right">Đã có nhiều đóng góp hoạt động cho Khoa CNTT</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li class="outstanding-members--items col l-3 c-12">
+                                <div class="members-items--content">
+                                    <div class="members-items--img">
+                                        <div class="img--circle">
+                                            <img src="./assets/images/thanhxuan02.png" alt="" class="members-items-file">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="members-items--info">
+                                        <div class="field--all">
+                                            <span class="field--left">Họ và Tên:</span>
+                                            <span class="field--right">Nguyễn Thị Thanh Xuân</span>
+                                        </div>
+                                        <div class="field--all">
+                                            <span class="field--left">Lớp:</span>
+                                            <span class="field--right">ĐHTI13A3HN</span>
+                                        </div>
+                                        <div class="field--all">
+                                            <span class="field--left">Thành tích nổi bật:</span>
+                                            <span class="field--right">Đã có nhiều đóng góp hoạt động cho Khoa CNTT</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li class="outstanding-members--items col l-3 c-12">
+                                <div class="members-items--content">
+                                    <div class="members-items--img">
+                                        <div class="img--circle">
+                                            <img src="./assets/images/thanhnam.jpg" alt="" class="members-items-file">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="members-items--info">
+                                        <div class="field--all">
+                                            <span class="field--left">Họ và Tên:</span>
+                                            <span class="field--right">Nguyễn Thành Nam</span>
+                                        </div>
+                                        <div class="field--all">
+                                            <span class="field--left">Lớp:</span>
+                                            <span class="field--right">ĐHTI14A4HN</span>
+                                        </div>
+                                        <div class="field--all">
+                                            <span class="field--left">Thành tích nổi bật:</span>
+                                            <span class="field--right">Đã có nhiều đóng góp hoạt động cho Khoa CNTT</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li class="outstanding-members--items col l-3 c-12">
+                                <div class="members-items--content">
+                                    <div class="members-items--img">
+                                        <div class="img--circle">
+                                            <img src="./assets/images/tienduc.jpg" alt="" class="members-items-file">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="members-items--info">
+                                        <div class="field--all">
+                                            <span class="field--left">Họ và Tên:</span>
+                                            <span class="field--right">Nguyễn Văn Đức</span>
+                                        </div>
+                                        <div class="field--all">
+                                            <span class="field--left">Lớp:</span>
+                                            <span class="field--right">ĐHTI14A4HN</span>
+                                        </div>
+                                        <div class="field--all">
+                                            <span class="field--left">Thành tích nổi bật:</span>
+                                            <span class="field--right">Đã có nhiều đóng góp hoạt động cho Khoa CNTT</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="courses">
+                <h3 class="courses--heading">Các khóa học </h3>
+                <div class="courses--content grid">
+                    <ul class="courses--list row">
+                        <li class="courses--items col l-3">
+                            <div class="coursese--items-blog">
+                                <a href="" class="items-blog--link">
+                                    <div class="items-blog--img">
+                                        <img src="./assets/images/course-1.png" alt="" class="items-blog--image">
+                                    </div>
+
+                                    <div class="items-blog--info">
+
+                                        <div class="items-blog--name">
+                                            <h3 class="items-blog--name-heading">Khóa Học Thiết Kế Đồ Họa</h3>
+                                        </div>
+                                        <div class="items-blog--oriented">
+                                            <span class="items-blog--left">Đối tượng:</span>
+                                            <span class="items-blog--right">Tất cả các sinh viên có đam mê Thiết Kế & muốn tìm hiểu các phần mềm thiết kế 
+                                                như Photoshop , Adobe Illustrator
+                                            </span>
+                                        </div>
+                                        <div class="items-blog--result">
+                                            <span class="items-blog--left">Thành quả:</span>
+                                            <span class="items-blog--right">Giúp các học viên sử dụng thành thạo về những tính năng cơ bản và chuyên sâu về các Phần Mềm Thiết Kế </span>
+                                        </div>
+
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="courses--items col l-3">
+                            <div class="coursese--items-blog">
+                                <a href="" class="items-blog--link">
+                                    <div class="items-blog--img">
+                                        <img src="./assets/images/1.png" alt="" class="items-blog--image">
+                                    </div>
+
+                                    <div class="items-blog--info">
+
+                                        <div class="items-blog--name">
+                                            <h3 class="items-blog--name-heading">Khóa Học Về Ngôn Ngữ Java</h3>
+                                        </div>
+                                        <div class="items-blog--oriented">
+                                            <span class="items-blog--left">Đối tượng:</span>
+                                            <span class="items-blog--right">Tất cả các sinh viên muốn tìm hiểu và học hỏi về các nền tảng như phần mềm, trang web,
+                                                 game hay ứng dụng
+                                            </span>
+                                        </div>
+                                        <div class="items-blog--result">
+                                            <span class="items-blog--left">Thành quả:</span>
+                                            <span class="items-blog--right">Giúp các học viên sử dụng và thành thạo từ cơ bản đến nâng cao trong ngôn ngữ Java </span>
+                                        </div>
+
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="courses--items col l-3">
+                            <div class="coursese--items-blog">
+                                <a href="" class="items-blog--link">
+                                    <div class="items-blog--img">
+                                        <img src="./assets/images/5.jpg" alt="" class="items-blog--image">
+                                    </div>
+
+                                    <div class="items-blog--info">
+
+                                        <div class="items-blog--name">
+                                            <h3 class="items-blog--name-heading">Khóa Học về C++ và OOP</h3>
+                                        </div>
+                                        <div class="items-blog--oriented">
+                                            <span class="items-blog--left">Đối tượng:</span>
+                                            <span class="items-blog--right">Tất cả các sinh viên muốn tìm hiểu về C++ cơ bản và Lập trình Hướng Đối Tượng
+                                            </span>
+                                        </div>
+                                        <div class="items-blog--result">
+                                            <span class="items-blog--left">Thành quả:</span>
+                                            <span class="items-blog--right">Giúp các học viên sử dụng và hiểu được những khái niệm và cách thức hoạt động của ngôn ngữ lập trình bậc thấp nhưng cực kì hữu dụng này</span>
+                                        </div>
+
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="courses--items col l-3">
+                            <div class="coursese--items-blog">
+                                <a href="" class="items-blog--link">
+                                    <div class="items-blog--img">
+                                        <img src="./assets/images/8.jpg" alt="" class="items-blog--image">
+                                    </div>
+
+                                    <div class="items-blog--info">
+
+                                        <div class="items-blog--name">
+                                            <h3 class="items-blog--name-heading">Khóa Học Về Lập trình Website </h3>
+                                        </div>
+                                        <div class="items-blog--oriented">
+                                            <span class="items-blog--left">Đối tượng:</span>
+                                            <span class="items-blog--right">
+                                                Các sinh viên muốn tìm hiểu và làm trong lĩnh vực Website như : FontEnd , BackEnd và FullStack
+                                            </span>
+                                        </div>
+                                        <div class="items-blog--result">
+                                            <span class="items-blog--left">Thành quả:</span>
+                                            <span class="items-blog--right">
+                                                Kết thúc khóa học thì học viên sẽ được biết các Ngôn Ngữ phổ biến trong lập trình Website như : HTML , CSS , Javascript , PHP ,...
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+            </div>
+
+            <div id="news">
+                <h3 class="news--heading"> Thi đua và các Hoạt động</h3>
+                <div class="competition-activities">
+                    <div class="news--content grid">
+                        <ul class="news--list row">
+                            <li class="news--items col l-3 c-6">
+                                <div class="news--items-blog">
+                                    <img src="./assets/images/tiktok (1).jpg" alt="" class="news--items-image">
+
+                                    <div class="news--items-info">
+                                        <h3 class="news--items-heading">Cuộc thi Tiktok vs ITC</h3>
+                                        <div class="news--items-time">
+                                            <span class="time--title">Thời gian:</span>
+                                            <span class="time--duration">18/03 - 01/04/2022</span>
+                                        </div>
+                                        <div class="news--items-desc">
+                                            <span class="desc--title">Mô tả:</span>
+                                            <span class="desc--info">Cuộc thi giúp thí sinh có thể thể hiện được những tài năng
+                                                 và giao lưu học hỏi cực bổ ích ở nền tảng mạng xã hội TikTok
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li class="news--items col l-3 c-6">
+                                <div class="news--items-blog">
+                                    <img src="./assets/images/tiktok (5).jpg" alt="" class="news--items-image">
+
+                                    <div class="news--items-info">
+                                        <h3 class="news--items-heading pink">Cuộc thi Thiết kế Ảnh bìa Tri Ân các thầy cô</h3>
+                                        <div class="news--items-time">
+                                            <span class="time--title">Thời gian:</span>
+                                            <span class="time--duration">25/10 - 17/11/2022</span>
+                                        </div>
+                                        <div class="news--items-desc">
+                                            <span class="desc--title">Mô tả:</span>
+                                            <span class="desc--info">Cuộc thi giúp thí sinh có thể thoải thiết kế những bức ảnh 
+                                                bìa sinh động , đa dạng nhằm chi ân các thầy cô giáo vào ngày Nhà Giáo Việt Nam
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="news--items col l-3 c-6">
+                                <div class="news--items-blog">
+                                    <img src="./assets/images/design_web.jpg" alt="" class="news--items-image">
+
+                                    <div class="news--items-info">
+                                        <h3 class="news--items-heading blue">Cuộc thi Thiết kế Giao diện Website</h3>
+                                        <div class="news--items-time">
+                                            <span class="time--title">Thời gian:</span>
+                                            <span class="time--duration">29/09 - 25/10/2022</span>
+                                        </div>
+                                        <div class="news--items-desc">
+                                            <span class="desc--title">Mô tả:</span>
+                                            <span class="desc--info">Cuộc thi Thiết kế giao diện Fontend giúp thí sinh có thể 
+                                                thỏa mái áp dụng những kiến thức website học được như: HTML , CSS , Javascript
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="news--items col l-3 c-6">
+                                <div class="news--items-blog">
+                                    <img src="./assets/images/tiktok (3).jpg" alt="" class="news--items-image">
+
+                                    <div class="news--items-info">
+                                        <h3 class="news--items-heading black">Hỗ Trợ SeaGame 31</h3>
+                                        <div class="news--items-time">
+                                            <span class="time--title">Thời gian:</span>
+                                            <span class="time--duration">12/05 - 23/05/2022</span>
+                                        </div>
+                                        <div class="news--items-desc">
+                                            <span class="desc--title">Mô tả:</span>
+                                            <span class="desc--info">Sinh Viên Trường Đại Học Kinh Tế - Kỹ Thuật - Công nghiệp hỗ trợ 
+                                                các vận động viên trong Đại Hội SeaGame 31 tổ chức tại Hà Nội và 11 tỉnh , thành phố của Việt Nam
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Row 2 -->
+                            <li class="news--items col l-3 c-6">
+                                <div class="news--items-blog">
+                                    <img src="./assets/images/talkshow.jpg" alt="" class="news--items-image">
+
+                                    <div class="news--items-info">
+                                        <h3 class="news--items-heading blue">Talk Show giao lưu và chia sẻ</h3>
+                                        <div class="news--items-time">
+                                            <span class="time--title">Thời gian:</span>
+                                            <span class="time--duration">Ngày 15/12/2021</span>
+                                        </div>
+                                        <div class="news--items-desc">
+                                            <span class="desc--title">Mô tả:</span>
+                                            <span class="desc--info">Cuộc họp định hướng và Chia sẻ Kiến thức , Cơ hội việc làm 
+                                                cho Sinh Viên ngành Công nghệ thông tin
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="news--items col l-3 c-6">
+                                <div class="news--items-blog">
+                                    <img src="./assets/images/olympic_It.jpg" alt="" class="news--items-image">
+
+                                    <div class="news--items-info">
+                                        <h3 class="news--items-heading red">Cuộc thi Olympic Tin Học lần thứ X</h3>
+                                        <div class="news--items-time">
+                                            <span class="time--title">Thời gian:</span>
+                                            <span class="time--duration">Ngày 26/12/2021</span>
+                                        </div>
+                                        <div class="news--items-desc">
+                                            <span class="desc--title">Mô tả:</span>
+                                            <span class="desc--info">Cuộc thi tổ chức bao gồm các đối tượng thuộc khối chuyên ngành IT hoặc 
+                                                khối không chuyên , thí sinh được làm những phần mềm và những ngôn ngữ lập trình phổ biến nhất hiện nay
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="news--items col l-3 c-6">
+                                <div class="news--items-blog">
+                                    <img src="./assets/images/welcome_k16.jpg" alt="" class="news--items-image">
+
+                                    <div class="news--items-info">
+                                        <h3 class="news--items-heading">Chào Mừng Tân sinh viên K16 đến với Uneti</h3>
+                                        <div class="news--items-time">
+                                            <span class="time--title">Thời gian:</span>
+                                            <span class="time--duration">Ngày 09/10/2022</span>
+                                        </div>
+                                        <div class="news--items-desc">
+                                            <span class="desc--title">Mô tả:</span>
+                                            <span class="desc--info">
+                                                Hoà mình vào trong tiết trời dịu nhẹ của mùa thu ấy,
+                                                 Câu lạc bộ Tin học - ITC vẫn đang miệt mài chuẩn bị cho công tác chào đón Tân sinh viên K16 Khoa Công nghệ thông tin ⚡️
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="news--items col l-3 c-6">
+                                <div class="news--items-blog">
+                                    <img src="./assets/images/tiktok (2).jpg" alt="" class="news--items-image">
+
+                                    <div class="news--items-info">
+                                        <h3 class="news--items-heading black">Hoạt Động Tranh tường bích họa</h3>
+                                        <div class="news--items-time">
+                                            <span class="time--title">Thời gian:</span>
+                                            <span class="time--duration">15/03 - 26/03/2022</span>
+                                        </div>
+                                        <div class="news--items-desc">
+                                            <span class="desc--title">Mô tả:</span>
+                                            <span class="desc--info">Công trình thanh niên "Tranh Tường Bích Họa"
+                                                - Tuổi trẻ Trường Đại học Kinh Tế - Kỹ Thuật Công nghệ sáng tạo , thi 
+                                                Đua chào mừng Đại hội Đoàn các cấp
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
         </div>
 
+        <footer id="footer">
+            <div class="footer--nav-bar">
+                <div class="footer-bar--content grid">
+                    <ul class="footer-bar-lists row">
+                        <li class="footer-bar--items col l-4">
+                            <div class="bar--items-content">
+                                <i class="bar--items-icon fa-solid fa-phone-flip"></i>
+                            </div>
+                            <div class="bar--items-block">
+                                <h3 class="bar--items-heading">Call us</h3>
+                                <a href="tel:0123456789" class="bar--items-link">012345689</a>
+                            </div>
+                        </li>
+
+                        <li class="footer-bar--items col l-4">
+                            <div class="bar--items-content">
+                                <i class="bar--items-icon fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="bar--items-block">
+                                <h3 class="bar--items-heading">Email</h3>
+                                <a href="http:://itc.edu.com.vn" class="bar--items-link">http:://itc.edu.com.vn</a>
+                            </div>
+                        </li>
+                        <li class="footer-bar--items col l-4">
+                            <div class="bar--items-content">
+                                <i class="bar--items-icon fa-solid fa-solid fa-file"></i>
+                            </div>
+                            <div class="bar--items-block">
+                                <h3 class="bar--items-heading">Fanpages</h3>
+                                <a href="#" class="bar--items-link">/InfomationTechnologyClub.uneti</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer--main">
+                <div class="footer--main-content grid">
+                    <ul class="footer--main-list row">
+                        <li class="footer--main-items col l-4">
+                            <p class="main-items-heading">Giới thiệu</p>
+                            <div class="main-items-block">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur suscipit nesciunt corporis unde, nulla id quasi.
+                                 Voluptatem dolor quibusdam ex recusandae, repellat dolore cum in itaque dolorum id,
+                                 non architecto aliquid iusto deserunt explicabo? Quis tempore explicabo natus perspiciatis doloremque.
+                            </div>
+                        </li>
+                        <li class="footer--main-items col l-4">
+                            <p class="main-items-heading">Liên hệ</p>
+                            <ul class="main-items-contact">
+                                <li class="items-contact-items">
+                                    <div class="contact-items-block">
+                                        <i class="contact-items-icon fa-solid fa-location-dot"></i>
+                                    </div>
+                                    <div class="contact-items-info">
+                                        <p>Số 218 Lĩnh Nam, Hoàng Mai, Hà Nội </p>
+                                        <p>Số 353 Trần Hưng Đạo, Tp.Nam Định</p>
+                                    </div>
+                                </li>
+
+                                <li class="items-contact-items">
+                                    <div class="contact-items-block circle">
+                                        <i class="contact-items-icon rotate fa-solid fa-solid fa-phone-volume"></i>
+                                    </div>
+                                    <div class="contact-items-info">
+                                        <p>
+                                            <a href="">0123456789</a>
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li class="items-contact-items">
+                                    <div class="contact-items-block">
+                                        <i class="contact-items-icon fa-solid fa-envelope"></i>
+                                    </div>
+                                    <div class="contact-items-info">
+                                        <p>itc@uneti.edu.vn</p>
+                                    </div>
+                                </li>
+
+                                <li class="items-contact-items">
+                                    <div class="contact-items-block">
+                                        <i class="contact-items-icon fa-solid fa-file"></i>
+                                    </div>
+                                    <div class="contact-items-info">
+                                        <p>/InformationTechnologyClub.uneti</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="footer--main-items col l-4">
+                            <p class="main-items-heading">Follow Us</p>
+                            <div class="social-meadia">
+                                <a href="" class="social-media-link">
+                                    <div class="social-meadia-items social-meadia--facebook">
+                                        <i class="social-media--icon fa-brands fa-facebook-f"></i>
+                                    </div>
+                                </a>
+
+                                <a href="" class="social-media-link">
+                                    <div class="social-meadia-items social-meadia--titok">
+                                        <i class="social-media--icon fa-brands fa-tiktok"></i>
+                                    </div>
+                                </a>
+
+                                <a href="" class="social-media-link">
+                                    <div class="social-meadia-items social-meadia--youtube">
+                                        <i class="social-media--icon fa-brands fa-youtube"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
         <div class="nav-bar">
             <div class="nav-bar--logo">
                 <a href="#" class="logo--link">
@@ -184,19 +908,19 @@
                             </a>
                         </li>
                         <li data-name="Leaders" class="navigation--items">
-                            <a href="#" class="items--link">
+                            <a href="#leaders" class="items--link">
                                 <i class="items--icons fa-solid fa-people-group"></i>
                                 <span class="items--name">Leaders</span>
                             </a>
                         </li>
                         <li data-name="Courses" class="navigation--items">
-                            <a href="#" class="items--link">
+                            <a href="#courses" class="items--link">
                                 <i class="items--icons fa-solid fa-lightbulb"></i>
                                 <span class="items--name">Course</span>
                             </a>
                         </li>
                         <li data-name="News" class="navigation--items">
-                            <a href="#" class="items--link">
+                            <a href="#news" class="items--link">
                                 <i class="items--icons fa-solid fa-newspaper"></i>
                                 <span class="items--name">News</span>
                             </a>

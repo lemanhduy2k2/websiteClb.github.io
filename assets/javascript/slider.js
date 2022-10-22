@@ -8,14 +8,13 @@ let orderArr = [];
 const sliderWrapper = $(".slider-wrapper");
 const sliderView = $(".slider-view");
 const sliderAllView = $$('.slide-item');
-
+console.log(sliderWrapper);
 
 const sliderRect = sliderWrapper.getBoundingClientRect();
-console.log(sliderRect);
 const viewWidth = sliderRect.width;
 
 function incrementSlide() {
-  if(orderArr.length == 3) {
+  if(orderArr.length == 4) {
     if(sliderIndex === 0) {
       orderArr = [];
     } else {
@@ -27,7 +26,11 @@ function incrementSlide() {
      sliderIndex++;
   }
   setSlideView(sliderIndex);
-  console.log(sliderIndex);
+}
+
+function swipeIncresement() {
+  sliderIndex = sliderIndex === sliderAllView.length - 1  ? 0 : sliderIndex + 1 ;
+  setSlideView(sliderIndex);
 }
 
 function decrementSlide() {
@@ -53,7 +56,7 @@ function SwipeToTransf (sliderAllView) {
       if(mouse_end >= mouse_start){
         decrementSlide();
       } else {
-        incrementSlide();
+        swipeIncresement();
       }
     }
   })
