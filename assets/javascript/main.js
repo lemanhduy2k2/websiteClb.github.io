@@ -125,15 +125,15 @@ function handleHeaderNav() {
 
 function handleHeaderNavItems(allItems) {
     allItems.forEach((item)=> {
-        item.addEventListener('click', (e)=> {
+        item.onclick =  (e)=> {
             const mainItem = e.target.closest('.navigation--items');
             if(mainItem) {
-                const Act_Pre_Item = $('.navigation--items.active');
-                Act_Pre_Item.classList.remove('active');
+                let Pre_Items = document.querySelector('.navigation--items.active');
+                Pre_Items.classList.remove('active');
                 mainItem.classList.add('active');
             }
-        })
-    })
+        }
+    });
 };
 
 
@@ -195,6 +195,15 @@ mobileMenuIcon.onclick = (e)=> {
         mobileNavigation.style.display = 'block';
         checkMobileIcon = true;
     }
+}
+
+
+document.onscroll = (e)=> {
+    let scrollTop = window.scrollY || document.documentElement.scrollTop;
+    if(scrollTop >= 2800) {
+        headerNav.classList.add('hidden');
+        navBar.style.height = "auto";
+     }
 }
 
 

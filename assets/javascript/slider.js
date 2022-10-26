@@ -8,7 +8,6 @@ let orderArr = [];
 const sliderWrapper = $(".slider-wrapper");
 const sliderView = $(".slider-view");
 const sliderAllView = $$('.slide-item');
-console.log(sliderWrapper);
 
 const sliderRect = sliderWrapper.getBoundingClientRect();
 const viewWidth = sliderRect.width;
