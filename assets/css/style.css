@@ -8,6 +8,7 @@
     left: 0;
     top: 0;
     border-radius: 8px;
+    z-index: 9999;
 }
 
 /* .nav-bar:hover 
@@ -146,6 +147,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
 }
 
 .header-bar-title {
@@ -1272,11 +1277,15 @@
 .main-items-block {
     font-size: 1.7rem;
     max-width: 400px;
-    color: #ae3930;
+    color: #333;
 }
 
 .items-block--text{
     margin-bottom: 10px;
+}
+
+.footer--main-items {
+    height: auto;
 }
 
 .footer--main-items:nth-child(3) .main-items-heading,
