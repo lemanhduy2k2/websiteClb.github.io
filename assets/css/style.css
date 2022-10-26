@@ -1225,7 +1225,7 @@
 }
 
 .comeback {
-    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1234,9 +1234,17 @@
     border-radius: 999px;
     background-color: rgba(0,0,0,0.1);
     color: #000;
-    top: 80%;
+    top: calc(100% - 60px);
     right: 30px;
     cursor: pointer;
+}
+
+.comeback > a {
+    display: block;
+}
+
+.comeback.hidden {
+    display: none;
 }
 
 .comeback > a i {
@@ -1262,9 +1270,13 @@
 }
 
 .main-items-block {
-    font-size: 2rem;
+    font-size: 1.7rem;
     max-width: 400px;
     color: #ae3930;
+}
+
+.items-block--text{
+    margin-bottom: 10px;
 }
 
 .footer--main-items:nth-child(3) .main-items-heading,
@@ -1371,6 +1383,11 @@
 }
 .mobile-content {
     display: none;
+}
+
+.video--field {
+    width: 100%;
+    padding: 0 0 15px;
 }
 
 @keyframes ZoomIn{

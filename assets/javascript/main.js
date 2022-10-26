@@ -11,6 +11,7 @@ const LoginBlogBtn = $('.register-login-blog');
 
 const NotificationIcon = $('.notification');
 const NotificationBox = $('.notification--box');
+const combackBtn = $('.comeback');
 
 // Start about Mobile Javascript
 const mobileMenuIcon = $('.mobile-content-menu');
@@ -203,6 +204,11 @@ document.onscroll = (e)=> {
     if(scrollTop >= 2800) {
         headerNav.classList.add('hidden');
         navBar.style.height = "auto";
+     }
+
+
+     if(e.isTrusted == true) {
+        combackBtn.classList.remove('hidden');
      }
 }
 
